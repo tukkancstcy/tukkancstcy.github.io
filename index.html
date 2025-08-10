@@ -5,20 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tukkan Consultancy and Analytics | Cybersecurity Services</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Share Tech Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
-    <!-- Leaflet CSS for Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
 
-    <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -41,15 +37,15 @@
                         'brand-light-gray': '#21262D',
                     },
                     animation: {
-                        'scroll': 'scroll 10s linear infinite',
+                        'scroll': 'scroll 80s linear infinite',
                         'blink': 'blink 1s step-end infinite',
                         'gradient-shift': 'gradient-shift 6s ease infinite',
                         'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
                     },
                     keyframes: {
                         scroll: {
-                          '0%': { transform: 'translateX(0)' },
-                          '100%': { transform: 'translateX(-100%)' },
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-25%)' },
                         },
                         blink: {
                             'from, to': { color: 'transparent' },
@@ -215,7 +211,6 @@
 </head>
 <body class="bg-brand-dark text-gray-300 antialiased font-sans">
 
-    <!-- Header -->
     <header class="bg-brand-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-brand-light-gray">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">
@@ -230,14 +225,12 @@
             <a href="#contact" class="hidden md:inline-block bg-brand-green text-brand-dark font-bold px-5 py-2 rounded-lg hover:bg-opacity-80 transition-all duration-300">
                 Get Quote
             </a>
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#services" class="block py-2 hover:text-brand-green">Services</a>
             <a href="#about" class="block py-2 hover:text-brand-green">About</a>
@@ -250,7 +243,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center overflow-hidden">
              <canvas id="matrix-canvas"></canvas>
              <div class="absolute inset-0 bg-brand-dark opacity-70 z-10"></div>
@@ -270,7 +262,6 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-20 bg-brand-gray">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -279,7 +270,6 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Service Card 1: Pentesting -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-red/50 hover:border-brand-red hover:shadow-glow-red transition-all duration-300"
                          data-color="red"
                          data-title="Penetration Testing"
@@ -297,7 +287,6 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 2: Training -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-orange/50 hover:border-brand-orange hover:shadow-glow-orange transition-all duration-300"
                          data-color="orange"
                          data-title="Cybersecurity Training"
@@ -316,7 +305,6 @@
                         </div>
                     </div>
                     
-                    <!-- Service Card 3: Malware & RE -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-purple/50 hover:border-brand-purple hover:shadow-glow-purple transition-all duration-300"
                          data-color="purple"
                          data-title="Malware Analysis & Reverse Engineering"
@@ -334,7 +322,6 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 4: DFIR -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-blue/50 hover:border-brand-blue hover:shadow-glow-blue transition-all duration-300"
                          data-color="blue"
                          data-title="Digital Forensics and Incident Response"
@@ -352,7 +339,6 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 5: OSINT -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-grey/50 hover:border-brand-grey hover:shadow-glow-grey transition-all duration-300"
                          data-color="grey"
                          data-title="OSINT Research"
@@ -370,7 +356,6 @@
                         </div>
                     </div>
                     
-                    <!-- Service Card 6: CTF Creation -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-yellow/50 hover:border-brand-yellow hover:shadow-glow-yellow transition-all duration-300"
                          data-color="yellow"
                          data-title="CTF Creation"
@@ -389,7 +374,6 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 7: Certification Training -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-crimson/50 hover:border-brand-crimson hover:shadow-glow-crimson transition-all duration-300"
                          data-color="crimson"
                          data-title="Certification Training"
@@ -408,7 +392,6 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 8: AI in Security -->
                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border-2 hover:border-brand-green transition-all duration-300 relative ai-wrapper"
                          data-color="ai"
                          data-title="AI in Security"
@@ -427,8 +410,7 @@
                         </div>
                     </div>
 
-                    <!-- Service Card 9: Blue Team Consultancy -->
-                     <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-blue/50 hover:border-brand-blue hover:shadow-glow-blue transition-all duration-300"
+                    <div class="service-card p-8 cursor-pointer bg-brand-light-gray rounded-xl border border-dashed border-brand-blue/50 hover:border-brand-blue hover:shadow-glow-blue transition-all duration-300"
                          data-color="blue"
                          data-title="Blue Team Consultancy"
                          data-pre-text="We provide expert implementation, configuration, and optimization for leading security platforms to enhance your detection and response capabilities."
@@ -450,7 +432,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="py-20 bg-brand-dark">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -484,18 +465,16 @@
             </div>
         </section>
         
-        <!-- Certifications Section -->
-        <section id="certifications" class="py-20 bg-brand-gray overflow-hidden">
+        <section id="certifications" class="py-20 bg-white overflow-hidden">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white text-shadow-blue">Industry-Recognized Certifications</h2>
-                    <p class="text-gray-400 mt-2">Our expertise is validated by the most respected organizations in security.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark text-shadow-blue">Industry-Recognized Certifications</h2>
+                    <p class="text-gray-600 mt-2">Our expertise is validated by the most respected organizations in security.</p>
                 </div>
             </div>
             <div class="relative w-full">
                 <div class="flex animate-scroll">
-                    <!-- To make the loop seamless, the list of logos is duplicated -->
-                   <div class="flex items-center flex-shrink-0">
+                    <div class="flex items-center flex-shrink-0">
                         <img src="/sans.png" alt="SANS Logo" class="h-24 mx-8 grayscale hover:grayscale-0 transition-all duration-300" style="filter: drop-shadow(0 0 2px #39FF14);">
                         <img src="/oscp.png" alt="OSCP Logo" class="h-24 mx-8 grayscale hover:grayscale-0 transition-all duration-300" style="filter: drop-shadow(0 0 2px #39FF14);">
                         <img src="/crest.png" alt="OSCP Logo" class="h-24 mx-8 grayscale hover:grayscale-0 transition-all duration-300" style="filter: drop-shadow(0 0 2px #39FF14);">
@@ -563,7 +542,6 @@
             </div>
         </section>
 
-        <!-- Regions Section -->
         <section id="regions" class="py-20 bg-brand-dark">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col items-center space-y-8">
@@ -572,8 +550,7 @@
                         <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">Delivering world-class cybersecurity services across multiple continents</p>
                     </div>
                     <div id="service-filter-buttons" class="flex flex-wrap justify-center gap-3 max-w-4xl animate-fade-in-up" style="animation-delay: 0.4s;">
-                        <!-- Filter buttons will be dynamically generated here -->
-                    </div>
+                        </div>
                     <div class="w-full h-[450px] md:h-[600px] rounded-xl overflow-hidden border border-gray-800 animate-fade-in-up" style="animation-delay: 0.6s;">
                         <div id="map" class="w-full h-full bg-brand-gray"></div>
                     </div>
@@ -585,7 +562,6 @@
         </section>
 
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 bg-brand-gray">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-white text-shadow-blue">Ready to Fortify Your Defenses?</h2>
@@ -602,28 +578,24 @@
         </section>
     </main>
     
-    <!-- Modal -->
     <div id="service-modal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
         <div id="modal-content" class="bg-brand-gray w-full max-w-2xl rounded-lg border border-dashed p-8 relative">
             <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl">&times;</button>
             <h3 id="modal-title" class="text-2xl font-bold text-white text-shadow-green mb-4"></h3>
             <p id="modal-pre-text" class="text-gray-300 mb-4"></p>
             <ul id="modal-details" class="list-disc list-inside text-gray-400 space-y-2 mb-6">
-                <!-- Details will be populated by JS -->
-            </ul>
+                </ul>
             <a id="modal-link" href="#" class="font-semibold hover:underline blinking-cursor"></a>
         </div>
     </div>
 
 
-    <!-- Footer -->
     <footer class="bg-brand-gray border-t border-brand-light-gray">
         <div class="container mx-auto px-6 py-6 text-center text-gray-500">
             <p>&copy; 2025 Tukkan Consultancy and Analytics. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Leaflet JS for Map -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>
@@ -689,6 +661,10 @@
                 
                 // Apply new classes based on color
                 switch (color) {
+                    case 'red':
+                        modalContent.classList.add('border-brand-red', 'shadow-glow-red');
+                        modalLink.classList.add('text-brand-red');
+                        break;
                     case 'green':
                         modalContent.classList.add('border-brand-green', 'shadow-glow-green');
                         modalLink.classList.add('text-brand-green');
@@ -870,8 +846,8 @@
 
                         const popupContent = `<div class="popup-title" style="color:#39FF14;">${loc.city}</div>` + 
                                              servicesForPopup.map(s => {
-                                                const serviceInfo = services[s];
-                                                return `<div style='color:${serviceInfo.color}'>- ${s}</div>`;
+                                                 const serviceInfo = services[s];
+                                                 return `<div style='color:${serviceInfo.color}'>- ${s}</div>`;
                                              }).join('');
 
                         const serviceColor = filter === 'All Services' ? '#39FF14' : services[filter].color;
@@ -992,7 +968,3 @@
 
 </body>
 </html>
-
-
-
-
